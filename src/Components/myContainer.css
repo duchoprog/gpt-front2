@@ -1,0 +1,40 @@
+.myContainer {
+  display: flex;
+  flex-direction: column;
+  justify-content: space-around;
+  align-items: center;
+  position: relative;
+  width: 80%;
+  flex-wrap: wrap;
+}
+.row {
+  flex-direction: row;
+}
+.cardCont {
+  justify-content: space-between;
+  width: 90%;
+}
+.cardTitle {
+  background-color: transparent;
+  width: 90%;
+  text-align: center;
+}
+
+.myContainer > .card:nth-child(6n + 1) {
+  background-color: var(--soft-yellow);
+}
+.card:nth-child(6n + 2) {
+  background-color: var(--soft-magenta);
+}
+.card:nth-child(6n + 3) {
+  background-color: var(--soft-orange);
+}
+.card:nth-child(6n + 4) {
+  background-color: var(--soft-blue);
+}
+.card:nth-child(6n + 5) {
+  background-color: var(--soft-green);
+}
+.card:nth-child(6n + 6) {
+  background-color: var(--soft-orange);
+}

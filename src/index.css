@@ -1,15 +1,4 @@
-body {
-  margin: 0;
-  font-family: -apple-system, BlinkMacSystemFont, "Segoe UI", "Roboto", "Oxygen",
-    "Ubuntu", "Cantarell", "Fira Sans", "Droid Sans", "Helvetica Neue",
-    sans-serif;
-  -webkit-font-smoothing: antialiased;
-  -moz-osx-font-smoothing: grayscale;
-}
-
 code {
-  font-family: source-code-pro, Menlo, Monaco, Consolas, "Courier New",
-    monospace;
 }
 
 /* http://meyerweb.com/eric/tools/css/reset/ 
@@ -101,8 +90,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  font-size: 100%;
-  font: inherit;
+  font-family: "Amatic SC", cursive;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */
@@ -118,9 +106,19 @@ menu,
 nav,
 section {
   display: block;
+  position: relative;
 }
 body {
-  line-height: 1;
+  margin: 0;
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  line-height: 1em;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  width: 100vw;
+  height: 100vh;
+  max-height: 100vh;
 }
 ol,
 ul {
@@ -145,6 +143,11 @@ table {
 :root {
   /* Colors */
   --magenta: #aa0078;
+  --soft-magenta: #c993b9;
+  --soft-orange: #f9aa5b;
+  --soft-yellow: #f0fa8e;
+  --soft-green: #9cfa8e;
+  --soft-blue: #8eadfa;
   --blue: #000078;
   --lavender-gray: #b3b3d7;
   --soft-amber: #d1cab0;
@@ -153,4 +156,8 @@ table {
 div {
   background-color: var(--lavender-gray);
   color: black;
+}
+h1 {
+  font-size: 2em;
+  font-weight: 700;
 }
