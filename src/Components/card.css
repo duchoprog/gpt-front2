@@ -14,3 +14,14 @@
   margin: 1em 1.5em;
   padding: 0.2em 0.2em;
 }
+.loc {
+  font-size: 1.5em;
+  line-height: 1.6em;
+  font-weight: 600;
+  height: fit-content;
+  max-width: 17%;
+  min-width: 17%;
+}
+.locSel {
+  outline: yellow solid 0.3em;
+}

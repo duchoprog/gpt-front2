@@ -2,15 +2,15 @@ import React from "react";
 import "./myBtn.css";
 import { useNavigate } from "react-router-dom";
 
-const MyBtn = ({ text, addClass, dest }) => {
+const MyBtn = ({ props }) => {
   const navigate = useNavigate();
 
   const goTo = () => {
-    navigate(dest);
+    navigate(props.dest);
   };
   return (
-    <div className={addClass ? addClass : "myBtn"} onClick={goTo}>
-      {text}
+    <div className={props.addClass ? props.addClass : "myBtn"} onClick={goTo}>
+      {props.children}
     </div>
   );
 };

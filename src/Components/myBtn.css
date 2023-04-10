@@ -3,6 +3,7 @@
   border: none;
   box-sizing: border-box;
   color: var(--blue);
+  font-family: "Amatic SC", cursive;
   font-size: 1.4em;
   font-weight: bold;
   line-height: 24px;
@@ -28,8 +29,17 @@
   margin: 0.2em auto;
   margin-bottom: 0.2em;
   box-sizing: border-box;
-  padding: 0;
+  padding: 0 0.2em;
 }
+
+.storyBtn {
+  width: fit-content;
+  margin: 0.2em auto;
+  margin-bottom: 0.2em;
+  box-sizing: border-box;
+  padding: 0 0.2em;
+}
+
 .myBtn:active {
   border-radius: 0.3em;
   font-size: 0.8em;

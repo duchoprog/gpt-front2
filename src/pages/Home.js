@@ -7,23 +7,21 @@ import MyBtn from "../Components/MyBtn";
 const Home = () => {
   return (
     <div className="home">
-      <Title text="Stories by me" addClass="title main" />
+      <Title addClass="title main">
+        <p>Stories by</p> <p>me!</p>{" "}
+      </Title>
+
       <MyContainer>
-        <Title
-          addClass="title"
-          text="Would you like to read a story from the library or create a new one?"
-        ></Title>
+        <Title addClass="title">
+          Would you like to read a story from the library or create a new one?
+        </Title>
         <MyContainer addClass="myContainer row">
-          <MyBtn
-            text="STORY FROM LIBRARY"
-            addClass="myBtn rotate-2"
-            dest="./library"
-          ></MyBtn>
-          <MyBtn
-            text="NEW STORY"
-            addClass="myBtn rotate2"
-            dest="./create"
-          ></MyBtn>
+          <MyBtn addClass="myBtn rotate-2" dest="./library">
+            STORY FROM LIBRARY
+          </MyBtn>
+          <MyBtn addClass="myBtn rotate2" dest="./create">
+            NEW STORY
+          </MyBtn>
         </MyContainer>
       </MyContainer>
     </div>

@@ -3,9 +3,6 @@
   width: 100%;
   max-height: 100vh;
   padding: 1em;
-  font-family: "Amatic SC", cursive;
+  /* font-family: "Amatic SC", cursive; */
   position: relative;
-}
-.App .reader .myContainer {
-  font-family: Verdana, Geneva, Tahoma, sans-serif;
 }

@@ -7,16 +7,20 @@
   position: relative;
   padding-bottom: 1em;
   box-sizing: border-box;
-  font-family: Verdana, sans-serif;
+  font-family: "Amatic SC", cursive;
 }
 .reader .title {
-  background-color: red;
-  height: 5em;
-  width: 5em;
+  background-color: transparent;
+  height: 2em;
+  margin: 0.5em 0;
+  width: fit fit-content;
 }
 .reader .myContainer {
-  background-color: green;
-  height: 5em;
+  background-color: transparent;
+  text-indent: 2em;
+  line-height: 1.8em;
+  font-family: "Verdana", sans-serif;
+  text-decoration-line: none;
 }
 .reader .myBtn {
   width: fit-content;

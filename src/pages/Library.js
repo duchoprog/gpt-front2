@@ -2,12 +2,12 @@ import React from "react";
 import "./library.css";
 import Title from "../Components/Title";
 import MyContainer from "../Components/MyContainer";
-import Card from "../Components/Card";
+import StoryCard from "../Components/StoryCard";
 import MyBtn from "../Components/MyBtn";
 
 const Library = () => {
   const MockStories = [
-    { title: "story 1 related to a boy that went to paris", key: 1 },
+    { title: "story 1 related to a boy that went to paris but forgot", key: 1 },
     { title: "story 2", key: 2 },
     { title: "story 3", key: 3 },
     { title: "story 4", key: 4 },
@@ -22,21 +22,19 @@ const Library = () => {
   ];
   return (
     <div className="library">
-      <Title text="Your library" />
+      <Title>Your library</Title>
       <MyContainer addClass={"myContainer row cardCont"}>
         {MockStories.map((story) => {
           return (
-            <Card title={story.title} key={story.key}>
-              <MyBtn
-                text="Read this!"
-                dest="/reader"
-                addClass={"myBtn cardBtn"}
-              ></MyBtn>
-            </Card>
+            <StoryCard title={story.title} key={story.key}>
+              <MyBtn dest="/reader" addClass={"myBtn storyBtn"}>
+                Read This!
+              </MyBtn>
+            </StoryCard>
           );
         })}
       </MyContainer>
-      <MyBtn text="Go back" dest="/"></MyBtn>
+      <MyBtn dest="/">Go back</MyBtn>
     </div>
   );
 };

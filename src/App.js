@@ -6,8 +6,10 @@ import Login from "./pages/Login";
 import Reader from "./pages/Reader";
 import Library from "./pages/Library";
 import Create from "./pages/Create";
+import { useState } from "react";
 
 function App() {
+  const [story, setStory] = useState("");
   return (
     <BrowserRouter className="App">
       <NavBar></NavBar>

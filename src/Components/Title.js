@@ -1,10 +1,10 @@
 import React from "react";
 import "./title.css";
 
-const Title = ({ text, addClass }) => {
+const Title = ({ addClass, children }) => {
   return (
     <div className={addClass ? addClass : "title"}>
-      <h2>{text}</h2>
+      <h1>{children}</h1>
     </div>
   );
 };

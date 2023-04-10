@@ -4,4 +4,19 @@
   display: flex;
   flex-direction: column;
   align-items: center;
+  font-family: "Amatic SC", cursive;
+}
+
+.home p {
+  display: inline-block;
+  text-decoration-line: underline;
+  text-decoration-thickness: 1px;
+  text-decoration-style: wavy;
+}
+
+p:nth-child(2) {
+  background-color: var(--soft-yellow);
+  transform: rotate(-5deg);
+  padding: 0 0.1em;
+  text-decoration: none;
 }
