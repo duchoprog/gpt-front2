@@ -1,17 +1,16 @@
-import React, { useState } from "react";
+import React, { useContext } from "react";
 import "./create.css";
 import Title from "../Components/Title";
 import MyContainer from "../Components/MyContainer";
 import LocCard from "../Components/LocCard";
 import { locations } from "../../src/utils/locations";
+import StoryContext from "../context/StoryContext";
+import CreateStoryBtn from "../Components/CreateStoryBtn";
 import MyBtn from "../Components/MyBtn";
+import { Spinner } from "../Components/Spinner";
 
 const Create = () => {
-  const [storyParams, setStoryParams] = useState({
-    star: "",
-    friend: "",
-    place: "",
-  });
+  const { storyParams, setStoryParams, loading } = useContext(StoryContext);
 
   const updateInput = (e) => {
     setStoryParams({ ...storyParams, [e.target.id]: e.target.value });
@@ -19,6 +18,7 @@ const Create = () => {
 
   return (
     <div className="create">
+      {loading && <Spinner></Spinner>}
       <Title addClass="title main">Let's create a new story</Title>
       <MyContainer addClass=" myContainer inputCont">
         <MyContainer addClass=" myContainer input">
@@ -46,20 +46,18 @@ const Create = () => {
       <MyContainer addClass="places">
         {locations.map((loc) => {
           return (
-            <LocCard
-              data-place="place"
-              addClass={"card loc"}
-              title={loc}
-              key={loc}
-              storyParams={storyParams}
-              setStoryParams={setStoryParams}
-            >
+            <LocCard data-place="place" title={loc} key={loc}>
               {loc}
             </LocCard>
           );
         })}
       </MyContainer>
-      <MyBtn text="Create my story!" addClass="myBtn createBtn"></MyBtn>
+      <MyContainer addClass="myContainer row buttons">
+        <CreateStoryBtn addClass="myBtn createBtn">
+          Create my story!
+        </CreateStoryBtn>
+        <MyBtn dest={"/"}>go back</MyBtn>
+      </MyContainer>
     </div>
   );
 };

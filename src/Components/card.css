@@ -22,6 +22,6 @@
   max-width: 17%;
   min-width: 17%;
 }
-.locSel {
-  outline: yellow solid 0.3em;
+.sel {
+  outline: rgba(243, 223, 7, 0.772) solid 0.3em;
 }

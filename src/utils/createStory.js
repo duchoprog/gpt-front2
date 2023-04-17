@@ -1,6 +1,11 @@
 import { Navigate } from "react-router-dom";
 
-export const createStory = async (setLoading, setStory, storyParams) => {
+export const CreateStory = async (
+  setLoading,
+  storyParams,
+  setStory,
+  loading
+) => {
   setLoading(true);
   await fetch("http://localhost:8000/openai-api", {
     method: "POST",

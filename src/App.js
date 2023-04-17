@@ -7,19 +7,22 @@ import Reader from "./pages/Reader";
 import Library from "./pages/Library";
 import Create from "./pages/Create";
 import { useState } from "react";
+import { StoryProvider } from "./context/StoryContext";
 
 function App() {
   const [story, setStory] = useState("");
   return (
     <BrowserRouter className="App">
-      <NavBar></NavBar>
-      <Routes>
-        <Route path="/" element={<Home />} />
-        <Route path="/reader" element={<Reader />} />
-        <Route path="/login" element={<Login />} />
-        <Route path="/create" element={<Create />} />
-        <Route path="/library" element={<Library />} />
-      </Routes>
+      <StoryProvider>
+        <NavBar></NavBar>
+        <Routes>
+          <Route path="/" element={<Home />} />
+          <Route path="/reader" element={<Reader />} />
+          <Route path="/login" element={<Login />} />
+          <Route path="/create" element={<Create />} />
+          <Route path="/library" element={<Library />} />
+        </Routes>
+      </StoryProvider>
     </BrowserRouter>
   );
 }

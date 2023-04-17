@@ -1,0 +1,33 @@
+.spinnerContainer {
+  position: fixed;
+  top: 0;
+  left: 0;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  width: 100vw;
+  height: 100vh;
+  background-color: rgba(33, 33, 33, 0.9);
+  z-index: 5;
+}
+
+.spinner {
+  margin: auto auto;
+  border: 1em solid rgba(0, 0, 0, 0.1);
+  width: 206px;
+  height: 206px;
+  border-radius: 55%;
+  border-left-color: #70f;
+  background-color: transparent;
+
+  animation: spin 1s linear infinite;
+}
+@keyframes spin {
+  0% {
+    transform: rotate(0deg);
+  }
+
+  100% {
+    transform: rotate(360deg);
+  }
+}

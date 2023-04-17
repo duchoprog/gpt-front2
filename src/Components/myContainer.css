@@ -20,6 +20,15 @@
   text-align: center;
 }
 
+.buttons {
+  width: 50%;
+  justify-content: center;
+}
+
+.buttons * {
+  margin: 0 1em;
+}
+
 .myContainer > .card:nth-child(6n + 1) {
   background-color: var(--soft-yellow);
 }
