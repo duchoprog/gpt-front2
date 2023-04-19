@@ -21,8 +21,9 @@
 }
 
 .buttons {
-  width: 50%;
+  width: fit-content;
   justify-content: center;
+  flex-wrap: nowrap;
 }
 
 .buttons * {

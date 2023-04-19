@@ -1,5 +1,5 @@
 .reader {
-  height: 100%;
+  height: fit-content;
   width: 100%;
   display: flex;
   flex-direction: column;
@@ -8,21 +8,43 @@
   padding-bottom: 1em;
   box-sizing: border-box;
   font-family: "Amatic SC", cursive;
+  background-color: var(--lavender-gray);
 }
 .reader .title {
-  background-color: transparent;
+  background-color: var(--soft-yellow);
   height: 2em;
   margin: 0.5em 0;
   width: fit fit-content;
+  transform: rotate(-3deg);
+  margin: 1em 0;
 }
 .reader .myContainer {
-  background-color: transparent;
   text-indent: 2em;
   line-height: 1.8em;
   font-family: "Verdana", sans-serif;
   text-decoration-line: none;
 }
 .reader .myBtn {
-  width: fit-content;
   max-height: 2em;
+}
+p {
+  margin-bottom: 0.5em;
+  text-align: left;
+}
+
+.btnContainer {
+  display: flex;
+  flex-direction: row;
+}
+
+.btnContainer .myBtn {
+  max-width: fit-content;
+  background-color: var(--soft-blue);
+}
+
+.btnContainer :nth-child(2n) {
+  transform: rotate(1deg);
+}
+.btnContainer :nth-child(2n + 1) {
+  transform: rotate(-1deg);
 }

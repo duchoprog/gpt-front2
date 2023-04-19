@@ -8,7 +8,7 @@ const Home = () => {
   return (
     <div className="home">
       <Title addClass="title main">
-        <p>Stories by</p> <p>me!</p>{" "}
+        <p>Stories by</p> <p className="rotated">me!</p>{" "}
       </Title>
 
       <MyContainer>

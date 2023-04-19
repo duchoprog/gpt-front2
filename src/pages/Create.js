@@ -8,6 +8,7 @@ import StoryContext from "../context/StoryContext";
 import CreateStoryBtn from "../Components/CreateStoryBtn";
 import MyBtn from "../Components/MyBtn";
 import { Spinner } from "../Components/Spinner";
+import Modal from "../Components/Modal";
 
 const Create = () => {
   const { storyParams, setStoryParams, loading } = useContext(StoryContext);
@@ -18,7 +19,11 @@ const Create = () => {
 
   return (
     <div className="create">
-      {loading && <Spinner></Spinner>}
+      {loading && (
+        <Modal>
+          <Spinner></Spinner>
+        </Modal>
+      )}
       <Title addClass="title main">Let's create a new story</Title>
       <MyContainer addClass=" myContainer inputCont">
         <MyContainer addClass=" myContainer input">

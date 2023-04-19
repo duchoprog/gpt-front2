@@ -22,12 +22,12 @@
   display: flex;
   flex-direction: column;
   justify-content: center;
+  white-space: nowrap;
 }
 
 .cardBtn {
   width: fit-content;
   margin: 0.2em auto;
-  margin-bottom: 0.2em;
   box-sizing: border-box;
   padding: 0 0.2em;
 }

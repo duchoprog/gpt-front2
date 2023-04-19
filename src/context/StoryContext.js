@@ -4,7 +4,7 @@ const StoryContext = createContext({});
 
 export const StoryProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
-  const [story, setStory] = useState("");
+  const [story, setStory] = useState({ text: "", title: "", id: "" });
   const [storyParams, setStoryParams] = useState({
     star: "",
     friend: "",

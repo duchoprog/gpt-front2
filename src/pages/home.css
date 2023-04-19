@@ -14,7 +14,7 @@
   text-decoration-style: wavy;
 }
 
-p:nth-child(2) {
+p.rotated {
   background-color: var(--soft-yellow);
   transform: rotate(-5deg);
   padding: 0 0.1em;

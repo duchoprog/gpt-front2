@@ -1,12 +1,7 @@
 import { Navigate } from "react-router-dom";
 
-export const CreateStory = async (
-  setLoading,
-  storyParams,
-  setStory,
-  loading
-) => {
-  setLoading(true);
+export const CreateStory = async (storyParams) => {
+  let returnable;
   await fetch("http://localhost:8000/openai-api", {
     method: "POST",
     body: JSON.stringify({
@@ -20,13 +15,11 @@ export const CreateStory = async (
   })
     .then((response) => response.json())
     .then((data) => {
-      console.log(data);
-      setStory(data);
+      returnable = data;
       Navigate("/reader");
-      setLoading(false);
     })
     .catch((err) => {
       console.log(err.message);
-      setLoading(false);
     });
+  return returnable;
 };
