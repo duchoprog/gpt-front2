@@ -1,4 +1,5 @@
 import React, { useContext } from "react";
+import { useNavigate } from "react-router-dom";
 import "./create.css";
 import Title from "../Components/Title";
 import MyContainer from "../Components/MyContainer";
@@ -7,11 +8,17 @@ import { locations } from "../../src/utils/locations";
 import StoryContext from "../context/StoryContext";
 import CreateStoryBtn from "../Components/CreateStoryBtn";
 import MyBtn from "../Components/MyBtn";
-import { Spinner } from "../Components/Spinner";
 import Modal from "../Components/Modal";
+import LoginButton from "../Components/LoginButton";
+import Profile from "../Components/Profile";
+import LogoutButton from "../Components/LogoutButton";
 
 const Create = () => {
-  const { storyParams, setStoryParams, loading } = useContext(StoryContext);
+  const { storyParams, setStoryParams, modal } = useContext(StoryContext);
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+    navigate(e.target.getAttribute("dest"));
+  };
 
   const updateInput = (e) => {
     setStoryParams({ ...storyParams, [e.target.id]: e.target.value });
@@ -19,11 +26,7 @@ const Create = () => {
 
   return (
     <div className="create">
-      {loading && (
-        <Modal>
-          <Spinner></Spinner>
-        </Modal>
-      )}
+      {modal && <Modal>modal</Modal>}
       <Title addClass="title main">Let's create a new story</Title>
       <MyContainer addClass=" myContainer inputCont">
         <MyContainer addClass=" myContainer input">
@@ -61,8 +64,13 @@ const Create = () => {
         <CreateStoryBtn addClass="myBtn createBtn">
           Create my story!
         </CreateStoryBtn>
-        <MyBtn dest={"/"}>go back</MyBtn>
+        <MyBtn dest={"/"} handleClick={handleClick}>
+          go back
+        </MyBtn>
       </MyContainer>
+      <LoginButton>adentro</LoginButton>
+      <LogoutButton></LogoutButton>
+      <Profile></Profile>
     </div>
   );
 };

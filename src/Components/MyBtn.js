@@ -2,14 +2,13 @@ import React from "react";
 import "./myBtn.css";
 import { useNavigate } from "react-router-dom";
 
-const MyBtn = ({ addClass, dest, children }) => {
-  const navigate = useNavigate();
+const MyBtn = ({ addClass, handleClick, children, dest }) => {
+  //const navigate = useNavigate();
   return (
     <div
       className={addClass ? addClass : "myBtn"}
-      onClick={() => {
-        navigate(dest);
-      }}
+      onClick={handleClick}
+      dest={dest}
     >
       {children}
     </div>

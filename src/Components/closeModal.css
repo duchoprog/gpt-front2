@@ -1,0 +1,9 @@
+.closeModal {
+  align-self: flex-end;
+}
+.closeModal {
+  font-size: 2em;
+  margin: 0;
+  margin-bottom: -1em;
+  cursor: pointer;
+}

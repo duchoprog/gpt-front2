@@ -4,8 +4,14 @@ import Title from "../Components/Title";
 import MyContainer from "../Components/MyContainer";
 import StoryCard from "../Components/StoryCard";
 import MyBtn from "../Components/MyBtn";
+import { useNavigate } from "react-router-dom";
 
 const Library = () => {
+  const navigate = useNavigate();
+  const handleClick = (e) => {
+    console.log(e.target.getAttribute("dest"));
+    navigate(-1);
+  };
   const MockStories = [
     { title: "story 1 related to a boy that went to paris but forgot", key: 1 },
     { title: "story 2", key: 2 },
@@ -34,7 +40,9 @@ const Library = () => {
           );
         })}
       </MyContainer>
-      <MyBtn dest="/">Go back</MyBtn>
+      <MyBtn dest={-1} handleClick={handleClick}>
+        Go back
+      </MyBtn>
     </div>
   );
 };

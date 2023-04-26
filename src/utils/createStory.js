@@ -21,5 +21,6 @@ export const CreateStory = async (storyParams) => {
     .catch((err) => {
       console.log(err.message);
     });
+  console.log(returnable);
   return returnable;
 };

@@ -8,6 +8,7 @@ import Library from "./pages/Library";
 import Create from "./pages/Create";
 import { useState } from "react";
 import { StoryProvider } from "./context/StoryContext";
+import Save from "./pages/Save";
 
 function App() {
   const [story, setStory] = useState("");
@@ -21,6 +22,7 @@ function App() {
           <Route path="/login" element={<Login />} />
           <Route path="/create" element={<Create />} />
           <Route path="/library" element={<Library />} />
+          <Route path="/save" element={<Save />} />
         </Routes>
       </StoryProvider>
     </BrowserRouter>

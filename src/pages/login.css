@@ -1,4 +1,8 @@
 .login {
+  font-family: inherit;
   font-size: large;
   background-color: var(--lavender-gray);
+  display: flex;
+  flex-direction: column;
+  align-items: center;
 }

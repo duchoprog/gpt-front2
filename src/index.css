@@ -90,7 +90,7 @@ video {
   margin: 0;
   padding: 0;
   border: 0;
-  /* font-family: "Amatic SC", cursive; */
+  font-family: "Amatic SC", cursive;
   vertical-align: baseline;
 }
 /* HTML5 display-role reset for older browsers */

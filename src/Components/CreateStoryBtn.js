@@ -6,14 +6,17 @@ import { useNavigate } from "react-router-dom";
 const CreateStoryBtn = ({ children, addClass }) => {
   const navigate = useNavigate();
 
-  const { setLoading, storyParams, setStory, story } = useContext(StoryContext);
+  const { setLoading, storyParams, setStory, story, setModal } =
+    useContext(StoryContext);
 
   const handleClick = async () => {
     console.log(story);
+    setModal("<Spinner></Spinner>");
     setLoading(true);
     let text = await CreateStory(storyParams);
     await setStory((story) => ({ ...story, text: text }));
     navigate("/Reader");
+    setModal("");
     setLoading(false);
     await console.log(story);
   };
