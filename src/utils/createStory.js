@@ -2,6 +2,7 @@ import { Navigate } from "react-router-dom";
 
 export const CreateStory = async (storyParams) => {
   let returnable;
+  console.log(storyParams);
   await fetch("http://localhost:8000/openai-api", {
     method: "POST",
     body: JSON.stringify({
@@ -21,6 +22,5 @@ export const CreateStory = async (storyParams) => {
     .catch((err) => {
       console.log(err.message);
     });
-  console.log(returnable);
   return returnable;
 };

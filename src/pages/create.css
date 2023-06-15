@@ -6,19 +6,6 @@
   min-height: 95vh;
 }
 
-.create input,
-.create label {
-  font-size: 1.5em;
-  line-height: 1.6em;
-  font-weight: 600;
-  width: 60%;
-}
-
-.create input {
-  border-radius: 0.5em;
-  font-family: "Amatic SC", cursive;
-}
-
 .create .places {
   width: 70%;
   margin-top: 0.5em;

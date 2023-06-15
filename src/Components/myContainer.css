@@ -48,3 +48,10 @@
 .card:nth-child(6n + 6) {
   background-color: var(--soft-orange);
 }
+.storyText {
+  margin: 1em auto;
+  padding: 1em;
+  background-color: rgba(255, 255, 255, 0.2);
+  border-radius: 1em;
+  box-shadow: 2px 2px 5px gray;
+}

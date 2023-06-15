@@ -29,6 +29,11 @@ const Reader = () => {
     <div className="reader">
       {modal && !story.id && <Modal>modal</Modal>}
       <Title>{story.title ? story.title : "My story"}</Title>
+      <img
+        src={`data:image/png;base64,${story.image.base64}`}
+        alt={`depiction of the story `}
+      />
+
       <MyContainer>
         {textArray.map((paragraph, index) => {
           return <p key={index}>{paragraph}</p>;

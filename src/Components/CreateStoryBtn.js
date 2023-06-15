@@ -10,13 +10,18 @@ const CreateStoryBtn = ({ children, addClass }) => {
     useContext(StoryContext);
 
   const handleClick = async () => {
-    console.log(story);
-    setModal("<Spinner></Spinner>");
+    //setModal("<Spinner></Spinner>");
     setLoading(true);
-    let text = await CreateStory(storyParams);
-    await setStory((story) => ({ ...story, text: text }));
+    /* let { textResponse, imageResponse } = await CreateStory(storyParams); */
+    let x = await CreateStory(storyParams);
+    await console.log(x);
+    await setStory((story) => ({
+      ...story,
+      text: x.text,
+      image: { addresses: x.image[0], base64: x.image[1] },
+    }));
     navigate("/Reader");
-    setModal("");
+    //setModal("");
     setLoading(false);
     await console.log(story);
   };

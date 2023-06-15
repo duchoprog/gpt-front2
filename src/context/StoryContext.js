@@ -5,7 +5,11 @@ const StoryContext = createContext({});
 export const StoryProvider = ({ children }) => {
   const [loading, setLoading] = useState(false);
   const [modal, setModal] = useState("");
-  const [story, setStory] = useState({ text: "", title: "", id: "" });
+  const [story, setStory] = useState({
+    text: "Once upon a time i farted",
+    title: "",
+    id: "",
+  });
   const [warning, setWarning] = useState({
     text: "",
     dest: "",

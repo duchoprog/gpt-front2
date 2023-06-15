@@ -68,8 +68,8 @@ const Create = () => {
           go back
         </MyBtn>
       </MyContainer>
-      <LoginButton>adentro</LoginButton>
-      <LogoutButton></LogoutButton>
+      {/* <LoginButton>adentro</LoginButton>
+      <LogoutButton></LogoutButton> */}
       <Profile></Profile>
     </div>
   );
