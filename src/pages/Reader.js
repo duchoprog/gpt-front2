@@ -24,19 +24,29 @@ const Reader = () => {
     });
     setModal("<Warning></Warning>");
   };
-
+  console.log(story.image);
   return (
     <div className="reader">
       {modal && !story.id && <Modal>modal</Modal>}
       <Title>{story.title ? story.title : "My story"}</Title>
-      <img
-        src={`data:image/png;base64,${story.image.base64}`}
+      {/* <img
+        src={`data:image/png;base64,${story.image.base64[0]}`}
         alt={`depiction of the story `}
-      />
+      /> */}
 
       <MyContainer>
         {textArray.map((paragraph, index) => {
-          return <p key={index}>{paragraph}</p>;
+          return (
+            <div>
+              <p key={index}>
+                <img
+                  src={`data:image/png;base64,${story.image.base64[index]}`}
+                  alt={`depiction of the story `}
+                />
+                {paragraph}
+              </p>
+            </div>
+          );
         })}
         {story.text && <p>The end.</p>}
       </MyContainer>
